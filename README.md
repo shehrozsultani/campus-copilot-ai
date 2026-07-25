@@ -1,36 +1,223 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CampusCopilot AI
 
-## Getting Started
+## Overview
 
-First, run the development server:
+CampusCopilot AI is an AI-powered academic workspace developed specifically for university IT students. The application combines AI-assisted learning, course module management, and academic task tracking into a single platform, allowing students to manage their studies more efficiently without switching between multiple applications.
+
+The system provides context-aware academic assistance by adapting its responses according to the selected course module, helping students understand technical concepts, solve programming problems, and organize their semester workload.
+
+---
+
+## Problem Statement
+
+University IT students frequently use multiple applications for coding assistance, note-taking, assignment management, and studying. Constantly switching between these tools interrupts productivity and makes academic workflows inefficient.
+
+CampusCopilot AI addresses this problem by providing a centralized workspace where students can receive AI-powered academic assistance, organize semester course modules, and manage assignments and deadlines from one interface.
+
+---
+
+## Target Users
+
+- University IT Students
+- Computer Science Students
+- Software Engineering Students
+- Study Groups
+- Students preparing for assignments, quizzes, and examinations
+
+---
+
+## Live Application
+
+https://campus-copilot-ai-eight.vercel.app
+
+---
+
+## GitHub Repository
+
+https://github.com/shehrozsultani/campus-copilot-ai
+
+---
+
+## Features
+
+### AI Academic Workspace
+
+- Ask academic questions using natural language.
+- Receive explanations of technical concepts.
+- Get programming guidance and debugging assistance.
+- Understand difficult coding problems with AI-powered support.
+
+### Module-Specific AI Workspaces
+
+CampusCopilot AI allows students to create dedicated AI workspaces for different semester courses.
+
+Examples include:
+
+- Object-Oriented Programming
+- Computer Networks
+- Operating Systems
+- Database Systems
+
+The AI automatically adapts its responses according to the selected course.
+
+### Dynamic System Prompting
+
+CampusCopilot AI dynamically changes the AI's system instructions based on the selected course module, enabling subject-specific explanations, programming assistance, and academic guidance.
+
+### Task Protocol Tracker
+
+Students can:
+
+- Add academic tasks
+- Edit existing tasks
+- Delete completed tasks
+- Track assignment deadlines
+- Organize daily academic activities
+
+### Quick Prompt Actions
+
+Built-in shortcuts allow students to:
+
+- Explain technical concepts
+- Review programming code
+- Debug coding errors
+- Receive subject-specific academic assistance
+
+### Interactive Course Module Management
+
+Students can:
+
+- Add new semester modules
+- Edit existing modules
+- Delete course modules
+- Organize semester subjects within the dashboard
+
+---
+
+## AI Feature
+
+CampusCopilot AI integrates the Google Gemini API to provide intelligent, real-time academic assistance.
+
+### AI Model
+
+- Google Gemini API
+- Model: **gemini-3.5-flash**
+
+### System Prompt
+
+```javascript
+const systemInstruction = course
+  ? `You are CampusCopilot AI, a specialized academic assistant for the course module: ${course}. Provide concise, accurate academic explanations, debugging assistance, programming guidance, and study support tailored to this subject.`
+  : `You are CampusCopilot AI, an advanced academic advisor and programming assistant for university IT students.`;
+```
+
+The AI dynamically changes its behavior according to the selected course module to provide context-aware academic support.
+
+---
+
+## Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Next.js (App Router) | Frontend Framework |
+| React | User Interface |
+| Tailwind CSS | Styling |
+| Google Gemini API (`@google/genai`) | AI Integration |
+| JavaScript | Programming Language |
+| Git & GitHub | Version Control |
+| Vercel | Deployment |
+
+---
+
+## Screenshots
+
+### AI Workspace
+
+![AI Workspace](ai-workspace.png)
+
+---
+
+### Course Modules
+
+![Course Modules](course-module.png)
+
+---
+
+### Task Tracker
+
+![Task Tracker](task-protocol.png)
+
+---
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/shehrozsultani/campus-copilot-ai.git
+```
+
+### Navigate to the Project Directory
+
+```bash
+cd campus-copilot-ai
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment Variables
+
+Create a `.env.local` file in the project root and add your Gemini API key:
+
+```env
+NEXT_PUBLIC_GEMINI_API_KEY=YOUR_API_KEY
+```
+
+### Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+campus-copilot-ai/
+│
+├── public/
+├── src/
+├── ai-workspace.png
+├── course-module.png
+├── task-protocol.png
+├── README.md
+├── package.json
+└── next.config.mjs
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Developer
 
-## Deploy on Vercel
+**Shehroz Sultani**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Final Project – CampusCopilot AI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed using Next.js, Tailwind CSS, and the Google Gemini API.
+
+---
+
+## License
+
+This project was developed as an individual academic final project for educational purposes.
